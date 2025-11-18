@@ -1,0 +1,268 @@
+/* ================================
+   RESET + BASE
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* ================================
+     NAVBAR
+  ================================ */
+  .navbar {
+    background: #8B0000;
+    color: #fff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+  
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+  }
+  
+  .logo span {
+    color: #ffd178;
+  }
+  
+  .nav-links {
+    list-style: none;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: .3s ease;
+  }
+  
+  .nav-links a:hover {
+    background: rgba(255,255,255,0.15);
+    border-radius: 6px;
+  }
+  
+  /* ================================
+     CONTAINER PRINCIPAL
+  ================================ */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+  
+  /* ================================
+     TITULOS
+  ================================ */
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #8B0000;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 10px;
+    border-left: 5px solid #8B0000;
+    padding-left: 10px;
+  }
+  
+  /* ================================
+     RESUMO DO PEDIDO
+  ================================ */
+  .resumo-pedido {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #eee;
+  }
+  
+  .resumo-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+    font-size: 16px;
+  }
+  
+  .total {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #8B0000;
+  }
+  
+  /* ================================
+     FORMAS DE PAGAMENTO
+  ================================ */
+  .formas-pagamento {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+  }
+  
+  .opcoes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-pagamento {
+    flex: 1;
+    min-width: 150px;
+    padding: 14px;
+    background: #8B0000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .btn-pagamento:hover {
+    background: #a30000;
+    transform: translateY(-2px);
+  }
+  
+  .btn-pagamento:active {
+    transform: scale(.98);
+  }
+  
+  /* ================================
+     DETALHES DO PAGAMENTO
+  ================================ */
+  .detalhes-pagamento {
+    margin-top: 25px;
+    padding: 20px;
+    background: #fff6f6;
+    border-left: 4px solid #8B0000;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  /* ================================
+     MODAL DE SUCESSO
+  ================================ */
+  .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .modal-content {
+    background: #fff;
+    max-width: 450px;
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    animation: fadeUp .35s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+  }
+  
+  .modal h2 {
+    font-size: 26px;
+    color: #28a745;
+    margin-bottom: 10px;
+  }
+  
+  .modal p {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+  
+  /* Animação do modal */
+  @keyframes fadeUp {
+    from {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* ================================
+     BOTÕES GENÉRICOS
+  ================================ */
+  .btn {
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: .3s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .secondary {
+    background: #8B0000;
+    color: #fff;
+  }
+  
+  .secondary:hover {
+    background: #a30000;
+  }
+  
+  /* ================================
+     RODAPÉ
+  ================================ */
+  footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 40px;
+    font-size: 14px;
+  }
+  
+  /* ================================
+     RESPONSIVIDADE
+  ================================ */
+  @media (max-width: 700px) {
+    .opcoes {
+      flex-direction: column;
+    }
+  
+    .btn-pagamento {
+      width: 100%;
+    }
+  
+    .container {
+      margin: 20px;
+      padding: 20px;
+    }
+  }
+  

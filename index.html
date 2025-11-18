@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Restaurante Churrasquebra — Cardápio</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <meta name="description" content="Restaurante Churrasquebra — sabores autênticos e atendimento acolhedor. Veja nosso cardápio, reserve ou faça seu pedido.">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <nav class="navbar" aria-label="Navegação principal">
+      <div class="logo" aria-hidden="false">Restaurante <span class="accent">Churrasquebra</span></div>
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
+      <ul class="nav-links" id="mainNav">
+        <li><a href="#entradas">Entradas</a></li>
+        <li><a href="#principais">Pratos</a></li>
+        <li><a href="#massas">Massas</a></li>
+        <li><a href="#carnes">Carnes</a></li>
+        <li><a href="#sobremesas">Sobremesas</a></li>
+        <li><a href="#bebidas">Bebidas</a></li>
+        <li><a href="#carrinho" aria-haspopup="dialog">Carrinho</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero" role="img" aria-label="Foto de pratos apetitosos">
+      <div class="hero-inner">
+        <h1>Sabores que acolhem.</h1>
+        <p>Do corte perfeito à sobremesa feita com carinho — venha viver uma refeição memorável.</p>
+        <a class="btn" href="#principais">Ver Cardápio</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="container destaque-reserva">
+      <h2>Reserve sua mesa</h2>
+      <form id="reservaForm" class="reserva" aria-labelledby="reserva-title">
+        <div class="form-row">
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" required />
+        </div>
+        <div class="form-row">
+          <label for="telefone">Telefone</label>
+          <input id="telefone" type="tel" placeholder="(00) 00000-0000" required />
+        </div>
+        <div class="form-row">
+          <label for="data">Data</label>
+          <input id="data" type="date" required />
+        </div>
+        <div class="form-row">
+          <label for="hora">Hora</label>
+          <input id="hora" type="time" required />
+        </div>
+        <div class="form-row">
+          <label for="pessoas">Pessoas</label>
+          <input id="pessoas" type="number" min="1" value="2" required />
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Reservar</button>
+        </div>
+        <div id="mensagem" class="mensagem" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <!-- Seções do cardápio (serão preenchidas por JavaScript) -->
+    <section id="entradas" class="container secao"><h2>Entradas</h2><div class="menu"></div></section>
+    <section id="principais" class="container secao"><h2>Pratos Principais</h2><div class="menu"></div></section>
+    <section id="massas" class="container secao"><h2>Massas</h2><div class="menu"></div></section>
+    <section id="carnes" class="container secao"><h2>Carnes</h2><div class="menu"></div></section>
+    <section id="sobremesas" class="container secao"><h2>Sobremesas</h2><div class="menu"></div></section>
+    <section id="bebidas" class="container secao"><h2>Bebidas</h2><div class="menu"></div></section>
+
+    <aside id="carrinho" class="container carrinho-container" aria-labelledby="carrinho-title">
+      <h2 id="carrinho-title">Seu Carrinho</h2>
+      <ul id="listaCarrinho" class="cart-list" aria-live="polite"></ul>
+      <p id="total" class="total">Total: R$ 0,00</p>
+      <div class="form-actions">
+        <button id="limparCarrinho" class="btn secondary">Limpar</button>
+        <button id="finalizar" class="btn" aria-controls="checkout">Finalizar Compra</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="ano"></span> Restaurante Churrasquebra — Todos os direitos reservados.</p>
+      <p class="credit">Desenvolvido por Miguel Santos</p>
+    </div>
+  </footer>
+
+  <script src="./javascript/script.js" defer></script>
+</body>
+</html>

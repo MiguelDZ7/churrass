@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Detalhes do Prato — Churrasquebra</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Churrasquebra <span>Gourmet</span></div>
+    <ul class="nav-links">
+      <li><a href="./index.html">Cardápio</a></li>
+      <li><a href="./checkout.html">Carrinho</a></li>
+    </ul>
+  </nav>
+
+  <main class="container detalhe-page" id="detalheContainer">
+    <div class="detalhe-conteudo">
+      <div class="detalhe-img-box">
+        <img id="detalheImg" alt="Imagem do prato" />
+      </div>
+
+      <div class="detalhe-info">
+        <h1 id="detalheNome"></h1>
+        <p id="detalheDesc" class="desc"></p>
+        <p id="detalhePreco" class="preco"></p>
+
+        <div class="detalhe-acoes">
+          <button id="btnAddCarrinho" class="btn">Adicionar ao Carrinho</button>
+          <a href="./index.html" class="btn secondary">Voltar ao Cardápio</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="detalhe-sugestoes">
+      <h2>Você também pode gostar</h2>
+      <div class="menu" id="sugestoes"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="ano"></span> Restaurante Churrasquebra. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="./javascript/detalhes.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout — Restaurante Churrasquebra</title>
+  <link rel="stylesheet" href="./css/checkout.css">
+  <meta name="description" content="Finalize seu pedido no Restaurante Churrasquebra. Escolha o método de pagamento e confirme sua compra.">
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" aria-label="Navegação principal">
+    <div class="logo">Churrasquebra <span>Gourmet</span></div>
+    <ul class="nav-links">
+      <li><a href="./index.html">Voltar ao Cardápio</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main class="container checkout-page" id="checkout" tabindex="-1">
+    <h1>Finalizar Pedido</h1>
+
+    <!-- Resumo do Pedido -->
+    <section class="resumo-pedido">
+      <h2>Resumo do Pedido</h2>
+      <ul id="listaResumo" class="resumo-list"></ul>
+      <p id="totalResumo" class="total"></p>
+    </section>
+
+    <!-- Formas de Pagamento -->
+    <section class="formas-pagamento">
+      <h2>Escolha a Forma de Pagamento</h2>
+      <div class="opcoes">
+        <button class="btn btn-pagamento" data-pag="pix">Pix</button>
+        <button class="btn btn-pagamento" data-pag="cartao">Cartão de Crédito</button>
+        <button class="btn btn-pagamento" data-pag="dinheiro">Dinheiro</button>
+      </div>
+    </section>
+
+    <!-- Detalhes do Pagamento (renderizados via JS) -->
+    <section id="detalhesPagamento" class="detalhes-pagamento"></section>
+  </main>
+
+  <!-- ===== MODAL DE SUCESSO ===== -->
+  <div id="modal-sucesso" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <h2>✅ Pedido Confirmado!</h2>
+      <p>Obrigado por escolher o <strong>Restaurante Churrasquebra</strong>.</p>
+      <p>Seu pedido está sendo preparado com carinho 🍽️</p>
+      <div style="display:flex;gap:.5rem;justify-content:center;margin-top:1rem">
+        <button id="voltarMenu" class="btn">Voltar ao Cardápio</button>
+        <button id="fecharModal" class="btn secondary">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer>
+    <p>© <span id="anoFooter"></span> Restaurante Churrasquebra. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ===== SCRIPT ===== -->
+  <script src="./javascript/checkout.js" defer></script>
+</body>
+</html>
